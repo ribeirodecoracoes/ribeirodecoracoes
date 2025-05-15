@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ribeiro Decorações</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #007b3e;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section.servicos {
+      margin-bottom: 2rem;
+    }
+    section.servicos h2 {
+      border-bottom: 3px solid #007b3e;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    ul.servicos-lista {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 1rem;
+    }
+    ul.servicos-lista li {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    ul.servicos-lista li img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 0.7rem;
+    }
+    ul.servicos-lista li strong {
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+      color: #007b3e;
+    }
+    section.contato {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgb(0 0 0 / 0.1);
+    }
+    section.contato h2 {
+      color: #007b3e;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .contato-item {
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .contato-info {
+      max-width: 70%;
+      font-size: 0.9rem;
+    }
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      padding: 0.6rem 1rem;
+      border-radius: 25px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background 0.3s ease;
+    }
+    .btn-whatsapp svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+    .btn-whatsapp:hover {
+      background: #1ebe57;
+    }
+    #whatsapp-flutuante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1000;
+      transition: background 0.3s ease;
+    }
+    #whatsapp-flutuante:hover {
+      background: #1ebe57;
+    }
+    #whatsapp-flutuante svg {
+      fill: white;
+      width: 32px;
+      height: 32px;
+    }
+    #contatos-whatsapp {
+      display: none;
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      background: white;
+      box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+      border-radius: 8px;
+      overflow: hidden;
+      z-index: 1001;
+      width: 260px;
+      font-size: 0.9rem;
+    }
+    #contatos-whatsapp a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #333;
+      border-bottom: 1px solid #eee;
+      transition: background 0.2s ease;
+    }
+    #contatos-whatsapp a:last-child {
+      border-bottom: none;
+    }
+    #contatos-whatsapp a:hover {
+      background: #f5f5f5;
+    }
+    #contatos-whatsapp svg {
+      width: 24px;
+      height: 24px;
+      fill: #25d366;
+    }
+    @media (max-width: 480px) {
+      .contato-info {
+        max-width: 100%;
+        margin-bottom: 0.5rem;
+      }
+      .contato-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Ribeiro Decorações</h1>
+  <p>Especialistas em Drywal, PVC, Cimento Queimado e Divisórias</p>
+</header>
+<main>
+  <section class="servicos" aria-labelledby="servicos-title">
+    <h2 id="servicos-title">Nossos Serviços</h2>
+    <ul class="servicos-lista">
+      <li>
+        <img src="https://images.unsplash.com/photo-1580582933101-12b79b0a6251?auto=format&fit=crop&w=400&q=80" alt="Rebaixamento de Drywal" />
+        <strong>Rebaixamento de Drywal</strong>
+        <p>Deixe seu ambiente moderno e funcional com nosso rebaixamento de Drywal.</p>
+      </li>
+      <li>
+        <img src="https://images.unsplash.com/photo-1590080877777-e6c792a1bede?auto=format&fit=crop&w=400&q=80" alt="Rebaixamento de PVC" />
+        <strong>Rebaixamento de PVC</strong>
+        <p>Qualidade e resistência com nosso rebaixamento em PVC.</p>
+      </li>
+      <li>
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=400&q=80" alt="Paredes de Cimento Queimado" />
+        <strong>Paredes de Cimento Queimado</strong>
+        <p>Acabamento elegante e moderno para suas paredes.</p>
+      </li>
+      <li>
+        <img src="https://images.unsplash.com/photo-1601901952204-2cc51b89de38?auto=format&fit=crop&w=400&q=80" alt="Divisórias de Drywal" />
+        <strong>Divisórias de Drywal</strong>
+        <p>Divida seus ambientes com estilo e funcionalidade.</p>
+      </li>
+    </ul>
+  </section>
+  <section class="contato" aria-labelledby="contato-title">
+    <h2 id="contato-title">Contatos</h2>
+    <div class="contato-item">
+      <div class="contato-info">
+        <strong>Cauan</strong><br />
+        (21) 96616-6193<br />
+        Atendimento nas regiões: Santa Cruz, Campo Grande, Recreio dos Bandeirantes, Barra e arredores.<br />
+        Consultar disponibilidade para outras regiões.
+      </div>
+      <a href="https://wa.me/5521966166193" target="_blank" rel="noopener" class="btn-whatsapp" aria-label="Chamar Cauan no WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M20.52 3.48A11.87 11.87 0 0012 0C5.37 0 0 5.37 0 12a11.9 11.9 0 001.63 6.07L0 24l6.12-1.6A11.87 11.87 0 0012 24c6.63 0 12-5.37 12-12 0-3.17-1.23-6.15-3.48-8.52zm-8.4 16.2a7.32 7.32 0 01-3.73-1.07l-.27-.16-3.5.91.94-3.4-.18-.28a7.35 7.35 0 01-1.16-4.16 7.42 7.42 0 014.14-6.33 7.23 7.23 0 014.2-.6 7.39 7.39 0 014.87 4.84 7.23 7.23 0 01-1.51 7.6 7.37 7.37 0 01-5.79 2.65zm3.97-5.7l-1.83-2.27-2.03-1.08 1.08 2.01-1.84 2.27-1.23-1.21a.9.9 0 01-.3-.76c.03-.5.2-1.01.4-1.
