@@ -1,42 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>Galeria de Serviços</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-        h2 {
-            margin-top: 40px;
-            color: #333;
-        }
-        img {
-            width: 100%;
-            max-width: 900px;
-            height: auto;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ribeiro Decorações</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+    header { background: #007b3e; color: white; padding: 1.5rem; text-align: center; }
+    ul.servicos-lista { list-style: none; display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1rem; padding: 0; }
+    li img { width: 100%; height: 150px; object-fit: cover; border-radius: 6px; }
+    li { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    #whatsapp-flutuante { position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000; }
+    #contatos-whatsapp { display: none; position: fixed; bottom: 90px; right: 20px; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-radius: 8px; width: 260px; font-size: 0.9rem; z-index: 1001; }
+    #contatos-whatsapp a { display: block; padding: 10px 15px; text-decoration: none; color: #333; border-bottom: 1px solid #eee; }
+    #contatos-whatsapp a:hover { background: #f5f5f5; }
+  </style>
 </head>
 <body>
-    <h1>Nossos Serviços</h1>
+<header>
+  <h1>Ribeiro Decorações</h1>
+  <p>Especialistas em Drywal, PVC, Cimento Queimado e Divisórias</p>
+</header>
+<main>
+  <ul class="servicos-lista">
+    <li><img src="https://images.unsplash.com/photo-1580582933101-12b79b0a6251?auto=format&fit=crop&w=800&q=80"><strong>Rebaixamento de Drywal</strong></li>
+    <li><img src="https://images.unsplash.com/photo-1590080877777-e6c792a1bede?auto=format&fit=crop&w=800&q=80"><strong>Rebaixamento de PVC</strong></li>
+    <li><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80"><strong>Cimento Queimado</strong></li>
+    <li><img src="https://images.unsplash.com/photo-1601901952204-2cc51b89de38?auto=format&fit=crop&w=800&q=80"><strong>Divisórias de Drywal</strong></li>
+  </ul>
+</main>
 
-    <h2>Rebaixamento de Drywall</h2>
-    <img src="rebaixamento-drywall.jpg" alt="Rebaixamento de Drywall">
-
-    <h2>Rebaixamento de PVC</h2>
-    <img src="rebaixamento-pvc.jpg" alt="Rebaixamento de PVC">
-
-    <h2>Cimento Queimado</h2>
-    <img src="cimento-queimado.jpg" alt="Cimento Queimado">
-
-    <h2>Divisórias de Drywall</h2>
-    <img src="divisoria-drywall.jpg" alt="Divisória de Drywall">
-
+<div id="whatsapp-flutuante" onclick="toggleContatos()">📱</div>
+<div id="contatos-whatsapp">
+  <a href="https://wa.me/5521966166193" target="_blank">Cauan (21) 96616-6193</a>
+  <a href="https://wa.me/5521977185795" target="_blank">Franciely (21) 97718-5795</a>
+  <a href="https://wa.me/5521976485665" target="_blank">Alexandre (21) 97648-5665</a>
+</div>
+<script>
+function toggleContatos() {
+  const box = document.getElementById('contatos-whatsapp');
+  box.style.display = box.style.display === 'block' ? 'none' : 'block';
+}
+</script>
 </body>
 </html>
